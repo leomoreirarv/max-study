@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cadastro v. 1</title>
+    <script src="app.js"></script>
+  </head>
+  <body>
+      <form>
+          <label for="name">Name:</label>
+          <input type="text" id="name">
+          <label for="surname">Surname:</label>
+          <input type="text" id="surname">
+          <button onclick="validForm();" type="button">Add</button>
+      </form>
+      <script>
+          var validForm = function(){
+            var validName = new Validation("name");
+            validName.min(10);
+
+            var validSurname = new Validation("surname");
+            validSurname.min(5);
+          }
+      </script>
+  </body>
+</html>

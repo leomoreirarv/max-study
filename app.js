@@ -10,7 +10,7 @@ Validation.prototype.init = function () {
 Validation.prototype.min = function (mincaracters) {
     var val = document.getElementById(this.fieldId).value;
     if (val.length < mincaracters) {
-        console.log("Ops, you must insert minimum " + mincaracters + " caracters");
+        this.msg("Ops, you must insert minimum " + mincaracters + " caracters");
     } else {
         console.log("min","Ok, validate");
     }
@@ -19,7 +19,7 @@ Validation.prototype.min = function (mincaracters) {
 Validation.prototype.empty = function () {
     var val = document.getElementById(this.fieldId).value;
     if (val === "") {
-        console.log("Por favor preencha os campos");
+        this.msg("Por favor preencha os campos");
     } else {
         console.log("empty","Ok, validate");
     }
@@ -28,8 +28,12 @@ Validation.prototype.empty = function () {
 Validation.prototype.max = function (maxcaracters) {
     var val = document.getElementById(this.fieldId).value;
     if (val.length > maxcaracters) {
-        console.log("por favor preencha menos de " +maxcaracters+ " caracters ");
+       this.msg("por favor preencha menos de " +maxcaracters+ " caracters ");
     } else {
         console.log("max","Ok, validate");
     }
+}
+
+Validation.prototype.msg = function (menssage) {
+    alert(this.fieldId +" : "+ menssage); 
 }

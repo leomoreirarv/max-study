@@ -16,9 +16,11 @@
           var validForm = function(){
             var validName = new Validation("name");
             validName.min(10);
+            validName.empty();
 
             var validSurname = new Validation("surname");
             validSurname.min(5);
+            validSurname.empty();
           }
       </script>
   </body>

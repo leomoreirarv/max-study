@@ -1,21 +1,26 @@
-var Validation = function(fieldId){
+var Validation = function (fieldId) {
     this.fieldId = fieldId;
 }
 
-Validation.prototype.init = function(){
-  var val = document.getElementById(this.fieldId).value;
-  console.log(val);
+Validation.prototype.init = function () {
+    var val = document.getElementById(this.fieldId).value;
+    console.log(val);
 }
 
-Validation.prototype.min = function(mincaracters){
+Validation.prototype.min = function (mincaracters) {
     var val = document.getElementById(this.fieldId).value;
-    if(val.length < mincaracters){
+    if (val.length < mincaracters) {
         console.log("Ops, you must insert minimum " + mincaracters + " caracters");
     } else {
         console.log("Ok, validate");
-    }   
+    }
 }
 
-Validation.prototype.empty = function(){
-    
+Validation.prototype.empty = function () {
+    var val = document.getElementById(this.fieldId).value;
+    if (val === "") {
+        console.log("Por favor preencha os campos");
+    } else {
+        console.log("Campo preenchido ok!");
+    }
 }

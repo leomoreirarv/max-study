@@ -17,10 +17,14 @@
             var validName = new Validation("name");
             validName.min(10);
             validName.empty();
+            validName.max(30);
 
             var validSurname = new Validation("surname");
             validSurname.min(5);
             validSurname.empty();
+            validSurname.max(30);
+
+            
           }
       </script>
   </body>

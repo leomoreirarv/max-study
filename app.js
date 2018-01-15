@@ -1,6 +1,3 @@
-// (function(){
-//     "use strict";
-
 var Validation = function(fieldId){
     this.fieldId = fieldId;
 }
@@ -18,4 +15,3 @@ Validation.prototype.min = function(mincaracters){
         console.log("Ok, validate");
     }   
 }
-// })();

@@ -15,3 +15,7 @@ Validation.prototype.min = function(mincaracters){
         console.log("Ok, validate");
     }   
 }
+
+Validation.prototype.empty = function(){
+    
+}

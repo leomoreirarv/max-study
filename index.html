@@ -1,31 +1,52 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Cadastro v. 1</title>
-    <script src="app.js"></script>
-  </head>
-  <body>
-      <form>
-          <label for="name">Name:</label>
-          <input type="text" id="name">
-          <label for="surname">Surname:</label>
-          <input type="text" id="surname">
-          <button onclick="validForm();" type="button">Add</button>
-      </form>
-      <script>
-          var validForm = function(){
-            var validName = new Validation("name");
-            validName.min(10);
-            validName.empty();
-            validName.max(30);
 
-            var validSurname = new Validation("surname");
-            validSurname.min(5);
-            validSurname.empty();
-            validSurname.max(30);
+<head>
+  <title>Cadastro v. 1</title>
+  <script src="app.js"></script>
+</head>
 
-            
-          }
-      </script>
-  </body>
+<body>
+  <form>
+    <div>
+      <label for="name">Name:</label>
+      <input type="text" id="name">
+    </div>
+    <div>
+      <label for="surname">Surname:</label>
+      <input type="text" id="surname">
+    </div>
+    <div>
+      <label for="password">Password:</label>
+      <input type="password" id="password">
+    </div>
+    <div>
+      <label for="reapetPassword">Reapet Password:</label>
+      <input type="password" id="reapetPassword">
+    </div>
+    <button onclick="validForm();" type="button">Validate</button>
+    
+  </form>
+  <script>
+    var validForm = function () {
+      var validName = new Validation("name");
+      validName.min(3);
+      validName.empty();
+      validName.max(30);
+
+      var validSurname = new Validation("surname");
+      validSurname.min(5);
+      validSurname.empty();
+      validSurname.max(30);
+
+      var validPassword = new Validation("password");
+      validPassword.empty();
+
+      var validReapetPassword = new Validation("reapetPassword");
+      validReapetPassword.empty();
+      validReapetPassword.isEqual("password");
+    }
+  </script>
+</body>
+
 </html>

@@ -1,0 +1,28 @@
+<!DOCTYPE>
+<html>
+
+<head>
+    <title></title>
+    <script src="calculadora.js"></script>
+</head>
+
+<body>
+    <form action="">
+        <label for="number1">Number 1</label>
+        <input type="number" id="number1">
+        <label for="number2">Number 2</label>
+        <input type="number" id="number2">
+        <label for="result">Result</label>
+        <input type="number" id="result">
+        <button type="button" onclick="calculo.sum();">Sum</button>
+        <button type="button" onclick="calculo.substraction();">Substration</button>
+        <button type="button" onclick="calculo.multiply();">Multiply</button>
+        <button type="button" onclick="calculo.division();">Division</button>
+    </form>
+
+    <script>
+        var calculo = new Calculadora("number1", "number2", "result");
+    </script>
+</body>
+
+</html>
